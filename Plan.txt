@@ -1,0 +1,62 @@
+Phase 1: Pre-Coding (Architecture & Planning)
+Before we write a single line of code, we need to define the system.
+
+Finalize the Stack: You listed both Django and Express. We need to pick one backend environment to serve our REST API.
+
+Database Schema Design: We need more than just a Products table. At a minimum, we need:
+
+Product: ID, Title, Price, Description, ImageURL, StockQuantity.
+
+Order: ID, CustomerName, CustomerEmail, TotalAmount, Status.
+
+OrderItem: ID, OrderID (foreign key), ProductID (foreign key), Quantity, PriceAtPurchase. (Why? Because product prices change over time, but past order receipts must remain accurate).
+
+State Management Strategy: The shopping cart needs global state so it can be accessed from the product page, the navigation bar, and the checkout page. We will need to decide between the React Context API or a lightweight library like Zustand.
+
+API Contract: Map out the exact endpoints we need (e.g., GET /api/products, GET /api/products/:id, POST /api/orders).
+
+Phase 2: Coding (Execution Milestones)
+We will build this layer by layer, verifying as we go.
+
+Milestone 1: The Foundation
+
+Initialize the Next.js frontend with Tailwind and TypeScript.
+
+Initialize the backend (Django or Express) and connect it to your database.
+
+Milestone 2: The Backend Engine
+
+Create the database models/tables.
+
+Write a seed script to populate the database with 5-10 fake products so we have data to work with.
+
+Build and test the GET /products API endpoint using a tool like Postman or Thunder Client.
+
+Milestone 3: The Catalog (Frontend)
+
+Build the main product grid view. Fetch the data from your backend.
+
+Implement dynamic routing (/product/[id]) for the Product Details Page.
+
+Milestone 4: The Cart Engine (The tricky part)
+
+Set up global state for the cart.
+
+Create the logic to add items, remove items, prevent adding items beyond available stock, and calculate the total.
+
+Milestone 5: Checkout & Order Processing
+
+Build the checkout form to capture user details.
+
+Create the POST /orders endpoint on the backend to receive the cart data and user details.
+
+On the frontend, send the payload, handle the loading state, show a success message, and clear the cart state.
+
+Phase 3: Post-Coding (Polish & Production)
+This separates beginner projects from senior-level applications.
+
+Error Handling & Edge Cases: What happens if the backend is down? What if a user tries to checkout with an empty cart? What if an item goes out of stock while it's in their cart? We must gracefully handle these.
+
+Performance Optimization: Implement Next.js Image components for optimized loading and ensure we aren't re-rendering components unnecessarily.
+
+Deployment: Push the frontend to a CDN-backed service (like Vercel) and the backend/database to a cloud provider (like Render, Railway, or Heroku).

@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+/* 1. Import your plugins (Make sure you npm install them first) */
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/container-queries";
+
+/* 2. Import your fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap'); */
+
+/* 3. Define your custom theme tokens */
+:root {
+  /* Colors */
+  --color-outline: #7e7576;
+  --color-surface-variant: #e2e2e2;
+  --color-surface-dim: #dadada;
+  --color-on-error: #ffffff;
+  --color-tertiary-fixed-dim: #c7c6c6;
+  --color-primary-fixed-dim: #c6c6c6;
+  --color-on-secondary-fixed: #1a1c1c;
+  --color-inverse-on-surface: #f1f1f1;
+  --color-on-surface-variant: #4c4546;
+  --color-secondary: #5d5f5f;
+  --color-on-surface: #1a1c1c;
+  --color-secondary-fixed-dim: #c6c6c7;
+  --color-surface-bright: #f9f9f9;
+  --color-inverse-primary: #c6c6c6;
+  --color-on-tertiary-fixed: #1b1c1c;
+  --color-error: #ba1a1a;
+  --color-primary: #000000;
+  --color-on-primary-fixed: #1b1b1b;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-highest: #e2e2e2;
+  --color-on-primary-fixed-variant: #474747;
+  --color-on-secondary: #ffffff;
+  --color-on-background: #1a1c1c;
+  --color-on-error-container: #93000a;
+  --color-background: #f9f9f9;
+  --color-surface-container-high: #e8e8e8;
+  --color-on-tertiary-fixed-variant: #464747;
+  --color-error-container: #ffdad6;
+  --color-outline-variant: #cfc4c5;
+  --color-on-secondary-container: #616363;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f4f3f3;
+  --color-on-secondary-fixed-variant: #454747;
+  --color-primary-container: #1b1b1b;
+  --color-tertiary: #000000;
+  --color-on-primary: #ffffff;
+  --color-on-tertiary-container: #848484;
+  --color-tertiary-container: #1b1c1c;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-fixed: #e3e2e2;
+  --color-surface-tint: #5e5e5e;
+  --color-inverse-surface: #2f3131;
+  --color-primary-fixed: #e2e2e2;
+  --color-secondary-fixed: #e2e2e2;
+  --color-surface: #f9f9f9;
+  --color-secondary-container: #dfe0e0;
+  --color-on-primary-container: #848484;
+
+  /* Spacing */
+  --spacing-margin-mobile: 16px;
+  --spacing-unit: 4px;
+  --spacing-gutter: 1px;
+  --spacing-margin-desktop: 40px;
+  --spacing-stack-lg: 64px;
+  --spacing-stack-md: 24px;
+  --spacing-container-max: 1440px;
+  --spacing-stack-sm: 8px;
+
+  /* Font Families */
+  --font-body-md: "Inter", sans-serif;
+  --font-label-xs: "Inter", sans-serif;
+  --font-headline-lg-mobile: "Inter", sans-serif;
+  --font-headline-lg: "Inter", sans-serif;
+  --font-display-xl: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-headline-md: "Inter", sans-serif;
+  --font-action-sm: "Inter", sans-serif;
+}
+
+/* 4. Map your composite text sizes into v4 utilities */
+ text-body-md {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+ text-label-xs {
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+ text-headline-lg-mobile {
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+ text-headline-lg {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+ text-display-xl {
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 900;
+}
+ text-body-lg {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+ text-headline-md {
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+ text-action-sm {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+/* 5. Brutalist resets */
+* {
+  border-radius: 0 !important;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none !important;
+  border-width: 2px !important;
+  border-color: #000000 !important;
+}
