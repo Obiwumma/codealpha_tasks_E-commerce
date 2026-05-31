@@ -28,7 +28,7 @@ export default function RegisterPage() {
 
     try {
       // Send the data to your Express backend
-      const res = await fetch('http://localhost:3000/api/auth/register', {
+      const res = await fetch('https://ecommerce-api-1uf6.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         // Sending email and password based on the visual form fields

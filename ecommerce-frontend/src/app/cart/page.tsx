@@ -23,7 +23,7 @@ export default function CartPage() {
 
   const handleCheckout = async () => {
     try {
-      const res = await fetch('http://localhost:3000/api/checkout', {
+      const res = await fetch('https://ecommerce-api-1uf6.onrender.com/api/checkout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

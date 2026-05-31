@@ -27,7 +27,7 @@ export default function AccountDashboard() {
 
     async function fetchOrders() {
       try {
-        const res = await fetch('http://127.0.0.1:3000/api/orders/me', {
+        const res = await fetch('https://ecommerce-api-1uf6.onrender.com/api/orders/me', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const data = await res.json();

@@ -14,7 +14,7 @@ interface Product {
 
 // 2. Build the fetcher function
 async function getSingleProduct(id: string) {
-  const res = await fetch(`http://localhost:3000/api/products/${id}`, { cache: 'no-store' });
+  const res = await fetch(`https://ecommerce-api-1uf6.onrender.com/api/products/${id}`, { cache: 'no-store' });
   
   if (!res.ok) {
     // If the backend returns a 404, we catch it here

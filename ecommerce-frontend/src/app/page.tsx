@@ -13,7 +13,7 @@ interface Product {
 
 async function getProducts(): Promise<Product[]> {
   try {
-    const res = await fetch('http://localhost:3000/api/products', { 
+    const res = await fetch('https://ecommerce-api-1uf6.onrender.com/api/products', { 
       cache: 'no-store' 
     });
     if (!res.ok) throw new Error('Failed to fetch catalog');
