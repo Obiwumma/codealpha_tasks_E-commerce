@@ -127,7 +127,7 @@ export default function SignInPage() {
                     setEmail('johndoe@email.com');
                     setPassword('pass1234');
                   }}
-                  className="text-xs text-gray-500 hover:text-black transition-colors"
+                  className="text-sm text-gray-800 hover:text-black transition-colors"
                 >
                   Use test account
                 </button>
