@@ -28,7 +28,7 @@ export default function SignInPage() {
       });
 
       const data = await res.json();
-
+  
       if (!res.ok) {
         throw new Error(data.error || 'Authentication failed');
       }
@@ -117,15 +117,31 @@ export default function SignInPage() {
             />
 
             {/* Action Button */}
-            <div className="mt-2">
+            <div className="mt-2 flex flex-col gap-3">
+              
+              {/* Test Mode Login Filler */}
+              <div className="flex justify-end -mt-6 z-10">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setEmail('johndoe@email.com');
+                    setPassword('pass1234');
+                  }}
+                  className="text-xs text-gray-500 hover:text-black transition-colors"
+                >
+                  Use test account
+                </button>
+              </div>
+
               <button 
                 disabled={loading}
-                className="w-full py-4 bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors duration-200 disabled:opacity-70 disabled:cursor-not-allowed rounded-none mb-4" 
+                className="w-full py-4 bg-black text-white text-sm font-medium hover:bg-gray-800 transition-colors duration-200 disabled:opacity-70 disabled:cursor-not-allowed rounded-none mb-1" 
                 type="submit"
               >
                 {loading ? 'Signing In...' : 'Sign In'}
               </button>
-              <Link href={"/register"} className="text-sm font-bold hover:text-gray-700 transition-colors">
+              
+              <Link href={"/register"} className="text-sm font-bold hover:text-gray-700 transition-colors text-center">
                 Don&apos;t have an account? Register here
               </Link>
             </div>
